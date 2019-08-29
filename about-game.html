@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>О игре</title>
+  <link rel="stylesheet" href="css/about-page.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Как играть?</h1>
+
+    <div class="description">
+      <h2></h2>
+      <p><span>Описание: </span>Игровое поле представляет собой степь с бегающими енотами. После клака по суслику он исчезает, а игрок получает очки.</p>
+      <p><span>Цель: </span>набрать как возможно большее колчество баллов, кликая на енотов.</p>
+      <p><span>Виды сусликов: </span></p>
+      <ul>
+        <li>маленький - 30 очков</li>
+        <li>средний - 20 очков</li>
+        <li>большой - 10 очков</li>
+      </ul>
+      <p><span>Препятствия: </span></p>
+      <ul>
+        <li>через некоторое время суслик убегает</li>
+        <li>при промахе количество жизне сокращается</li>
+        <li>еноты подвижны и имеют непредсказуемую траекторию</li>
+      </ul>
+      <div class="description-items">
+        <div class="col">
+          <img src="../img/heart_icon.png" alt="health">
+          <p class="desc">Жизни</p>
+        </div>
+        <div class="col">
+          <img src="../img/clock_icon.png" alt="time">
+          <p class="desc">Оставшееся<br>время</p>
+        </div>
+        <div class="col">
+          <img src="../img/enemy.png" alt="enemy">
+          <p class="desc">Цель</p>
+        </div>
+        <div class="col">
+          <img src="../img/star_icon.png" alt="enemy">
+          <p class="desc">Набранне<br>очки</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <input type="button" value="На главную" id="start_button">
+  </div>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/about-page.js"></script>
+</body>
+</html>

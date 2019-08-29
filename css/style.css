@@ -1,0 +1,346 @@
+@font-face {
+  font-family: "MyFont";
+  src: url(../fonts/angrybirds-regular.ttf) format("truetype");
+}
+
+* {margin: 0; padding: 0; user-select: none; outline: none;}
+body, html {
+  height: 100%;
+}
+body {
+  /* #cd853f */
+  --user-HUD-color: white;
+  font-family: 'MyFont', arial;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  -webkit-font-smoothing: none;
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#wrapper {
+  position: relative;
+  /* border: solid brown 4px; */
+  /* border-radius: 5px; */
+  display: flex;
+  flex-direction: row;
+}
+
+.gui {
+  position: absolute;
+}
+
+/* -------------Стартовая страница------------ */
+/* О игре */
+.about-game {
+  position: absolute;
+  display: block;
+  right: 10px;
+  bottom: 10px;
+  color: #8b4513;
+  /* text-decoration: none; */
+  font-size: 26px;
+}
+
+#start-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+}
+
+.page-bg {
+  position: relative;
+  padding: 50px 30px;
+  border-radius: 20px;
+  background-color: #d8d8d8;
+}
+
+.page-bg h1 {
+  text-align: center;
+}
+
+#start_button {
+  display: block;
+  margin: 0 auto;
+}
+
+#start-page h1 {
+  color: #ea9645;
+  font-size: 60px;
+  margin-bottom: 30px;
+  letter-spacing: 8px;
+}
+
+#start-page #name {
+  display: block;
+  margin: 0 auto;
+  background-color: #cd853f;
+  padding: 8px 0;
+  font-size: 32px;
+  color: #8b4513;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  border: 6px solid #8b4513;
+}
+
+#start-page #name::placeholder {
+	color: #E6AA6F;
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+#start-page #name:focus::placeholder {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+#start-page #start_button:disabled {
+  border: 6px solid rgba(0, 0, 0, 0);
+  color: #696969;
+  background-color: #ababab;
+}
+#start-page #start_button:disabled:hover {
+  cursor: default;
+  letter-spacing: 0px;
+}
+/* ------------------------------------------ */
+
+/* -------------Страница конца игры------------ */
+/* Текущий результат */
+.now-results {
+  position: absolute;
+  top: 140px;
+  left: 20px;
+}
+.now-results p {
+  padding: 8px 0;
+  font-size: 30px;
+}
+
+.now-results .tr-main {
+  font-size: 24px;
+}
+
+.now-results th {
+  padding: 6px;
+}
+.now-results td {
+  padding: 8px;
+  font-size: 22px;
+}
+.now-results .tr-main-new {
+  background-color: #773c11;
+}
+.now-results tbody> :nth-child(2) {
+  background-color: #cd853f;
+}
+.now-results .new-board {
+  text-align: center;
+  color: #fff;
+  width: 290px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #cd853f;
+}
+
+.now-results table {
+  font-size: 30px;
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+}
+/* -------------------------- */
+
+
+#end-game-page {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+}
+
+#end-game-page h1 {
+  font-size: 60px;
+  color: #8b4513;
+}
+
+/* доска лидеров */
+#end-game-page .lboard {
+  color: #fff;
+  width: 500px;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #cd853f;
+}
+
+.lboard table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #cd853f;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#end-game-page h1 {
+  font-size: 50px;
+}
+.lboard p {
+  text-align: center;
+  font-size: 36px;
+  padding: 16px 0;
+}
+
+.lboard tr {
+
+}
+.lboard th {
+
+  font-size: 28px;
+}
+.lboard td {
+  font-size: 20px;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.tr-main {
+  background-color: #8b4513;
+}
+
+/* первое место */
+tbody> :nth-child(2) {
+  background-color: #eac500;
+}
+/* второе место */
+tbody> :nth-child(3) {
+  background-color: #aaa;
+}
+/* третье место */
+tbody> :nth-child(4) {
+  background-color: #967444;
+}
+
+.itsMe {
+  background-color: #4d447b;
+}
+
+#start_button,
+#restart_button {
+  font-family: "MyFont";
+  transition: .9s;
+  border: 6px solid #8b4513;
+  border-top: 6px solid rgba(0, 0, 0, 0);
+  border-bottom: 6px solid rgba(0, 0, 0, 0);
+  color: #8b4513;
+  border-radius: 50px;
+  font-size: 30px;
+  background-color: #cd853f;
+  padding: 10px 30px;
+}
+
+#start_button:hover,
+#restart_button:hover {
+  cursor: pointer;
+  letter-spacing: 2px;
+
+  border-top: 6px solid #8b4513;
+  border-bottom: 6px solid #8b4513;
+}
+/* ------------------------------------------ */
+
+/* ---------------------HUD------------------ */
+
+/* Кнопка паузы */
+/* #ea9645
+#8b4513 */
+.pause {
+  transition: 1s;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  border: 4px solid #fff;
+  width: 56px;
+  height: 56px;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  background-color: #ea9645;
+  cursor: pointer;
+}
+
+.pause:hover {
+  border-color: #db5705;
+  color: #db5705;
+}
+
+/* Имя игрока */
+.user-name {
+  color: var(--user-HUD-color);
+  right: 10px;
+  top: 10px;
+  font-size: 40px;
+}
+
+/* Счёт */
+.score {
+  color: var(--user-HUD-color);
+  font-size: 42px;
+  right: 70px;
+  top: 60px;
+}
+
+.score-img {
+  width: 50px;
+  height: 50px;
+  top: 60px;
+  right: 10px;
+  background: url(../img/star_icon.png) no-repeat;
+  background-size: contain;
+}
+
+/* Таймер */
+.text-timer {
+  color: var(--user-HUD-color);
+  margin: 0;
+  left: 110px;
+  font-size: 60px;
+}
+
+.timer-img {
+  width: 60px;
+  height: 60px;
+  top: 10px;
+  left: 250px;
+  background: url(../img/clock_icon.png) no-repeat;
+  background-size: contain;
+}
+
+/* Жизни */
+.health {
+  height: 50px;
+  right: 200px;
+  top: 10px;
+}
+
+.health img {
+  height: 100%;
+  padding-left: 4px;
+}
+/* ------------------------------------------ */

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Игра - Енотобой</title>
+  <link rel="icon" href="/img/enemy.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="wrapper">
+    <!-- Старт игры -->
+    <div id="start-page" class="gui">
+      <div class="page-bg">
+        <a href="/about-game.html" class="about-game">О игре</a>
+
+        <h1>ЕНОТОБОЙ</h1>
+        <input type="text" id="name" autocomplete="off" maxlength="12" placeholder="Your name">
+        <input type="button" value="Начать игру" id="start_button" disabled>
+      </div>
+    </div>
+
+    <!-- Конец игры -->
+    <div id="end-game-page" class="gui">
+      <!-- Текущий результат -->
+      <div class="now-results">
+        <div class="new-board">
+          <p>Текущий результат</p>
+          <table>
+            <tr class="tr-main-new">
+              <th>Имя</th>
+              <th>Убито</th>
+              <th>Счёт</th>
+            </tr>
+            <tr>
+              <td id="newNameb">NotEXE</td>
+              <td id="newKilledb">72</td>
+              <td id="newScoreb">4630</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <h1>Игра окончена</h1>
+      <div class="lboard">
+        <p>Таблица лидеров</p>
+        <table>
+          <tr class="tr-main">
+            <th>Место</th>
+            <th>Имя</th>
+            <th>Убито</th>
+            <th>Счёт</th>
+          </tr>
+        </table>
+      </div>
+      <input type="button" value="Играть снова" id="restart_button">
+    </div>
+
+    <!-- GUI -->
+    <div class="health gui">
+      <!-- <img src="img/heart_icon.png" alt="heart"> -->
+    </div>
+    <div class="text-timer gui"></div>
+    <div class="timer-img gui"></div>
+
+    <div class="user-name gui">NOTEXE</div>
+    <div class="score gui" id="score">0</div>
+    <div class="score-img gui"></div>
+    <div class="pause active gui">I I</div>
+
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/core/animate.js"></script>
+  <script src="js/core/gameLoop.js"></script>
+  <script src="js/core/Actions.js"></script>
+  <script src="js/core/other.js"></script>
+  <script src="js/core/move.js"></script>
+  <script src="js/userHUD.js"></script>
+  <script src="js/gameStates.js"></script>
+  <script src="js/game.js"></script>
+
+
+</body>
+</html>
